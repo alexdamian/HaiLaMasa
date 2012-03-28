@@ -16,6 +16,7 @@ gen/
 
 ## Eclipse generated files and folders
 .metadata/*
+*/project.properties
 */.classpath
 */.project
 */.settings/
