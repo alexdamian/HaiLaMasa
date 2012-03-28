@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MainScreenActivity!</string>
+    <string name="app_name">ClientManager</string>
+    <string name="no_tables">No Tables Available</string>
+    <string name="add_food">Add Item</string>
+    <string name="add_client">Add Client</string>
+    <string name="no_food_ordered">No Food Ordered</string>
+    <string name="food_delivered">Delivered</string>
+    <string name="food_not_delivered">Deliver</string>
+    <string name="prev_client">&lt;&lt;</string>
+    <string name="next_client">&gt;&gt;</string>
+    <string name="client_pay">Pay</string>
+
+</resources>

@@ -1,0 +1,52 @@
+package clientmanager;
+
+option java_package="com.clientmanager";
+option java_outer_classname = "CommunicationProtos";
+
+message FoodItem {
+	enum FoodStatus {
+		ORDERED = 1;
+		IN_PROCESS = 2;
+		CANCELLED = 3;
+		SERVED = 4;
+	}
+
+	required string name = 1;
+	required int32 price = 2;
+	required int32 time = 3;
+	required FoodStatus status = 4;
+}
+
+message ClientCheck {
+	required bool paid = 1;
+	required int32 price_to_pay = 2;
+	required int32 time_to_serve = 3;
+	repeated FoodItem food_items = 4;
+}	
+
+message TableInfo {
+	enum TableStatus {
+		FREE = 1;
+		TAKEN = 2;
+	}
+
+	required int32 table_id = 1;
+	required TableStatus status = 2;
+	required int32 max_clients = 3;
+	repeated ClientCheck client_checks = 4;	
+}
+
+message Tables {
+	repeated TableInfo tables = 1;
+}
+
+message SocketMessage {
+	enum MessageType {
+		REQUEST_FREE_TABLES = 1;
+		REQUEST_TABLE_INFO = 2;
+		SAVE_TABLE_INFO = 3;
+	}
+	required MessageType message_type = 1;
+	optional int32 table_id = 2;
+	optional TableInfo table_info = 3;
+}

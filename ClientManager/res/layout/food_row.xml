@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical" >
+	    <TextView
+	        android:id="@+id/food_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="TextName"
+	        android:textSize="24dp"
+	        android:paddingRight="10px" />
+	
+	    <TextView
+	        android:id="@+id/food_price"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="FoodPrice"
+	        android:layout_toRightOf="@id/food_name" />
+
+	    <TextView
+	        android:id="@+id/food_time"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="FoodTime"
+	        android:layout_toRightOf="@id/food_name"
+	        android:layout_below="@id/food_price" />
+	    
+	    <Button
+	        android:id="@+id/buttonFoodDelivered"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/food_not_delivered"
+	        android:layout_alignParentRight="true"
+	        android:width="100dp" />
+	    
+	</RelativeLayout>
+
+</LinearLayout>
